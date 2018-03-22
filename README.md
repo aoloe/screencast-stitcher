@@ -38,7 +38,7 @@ Use it at your own peril and only on copies of your files.
 
 ### Process the project
 
-<img src="demo/readme/assets/project.png" height="200"> <img src="demo/readme/assets/plus.png" height="200"> <img src="demo/readme/assets/cover.png" height="200"> <img src="demo/readme/assets/plus.png" height="200"> <img src="demo/readme/assets/track-01.gif" height="200" border="1"> <img src="demo/readme/assets/plus.png" height="200"> <img src="demo/readme/assets/subtitle.png" height="200"> <img src="demo/readme/assets/plus.png" height="200"> <img src="demo/readme/assets/closing.png" height="200"> <img src="demo/readme/assets/equal.png" height="200"> <img src="demo/readme/assets/screencast.gif" height="200">
+<img src="demo/readme/assets/project.png" height="200"> <img src="demo/readme/assets/plus.png" height="200"> <img src="demo/readme/assets/cover.png" height="200"> <img src="demo/readme/assets/plus.png" height="200"> <img src="demo/readme/assets/track-01.gif" height="200" style="border 1px black"> <img src="demo/readme/assets/plus.png" height="200"> <img src="demo/readme/assets/subtitle.png" height="200"> <img src="demo/readme/assets/plus.png" height="200"> <img src="demo/readme/assets/closing.png" height="200"> <img src="demo/readme/assets/equal.png" height="200"> <img src="demo/readme/assets/screencast.gif" height="200" style="border 1px black">
 
 
 ```sh
