@@ -4,9 +4,9 @@ size:
 text:
   color: black
   font: arimo.ttf
-  size: 26
+  size: 36
   x: 20
-  y: h-50
+  y: h-60
   background-color: ffffff00
 tracks:
   - file: svg/cover.svg
