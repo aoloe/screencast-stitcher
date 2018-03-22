@@ -38,16 +38,16 @@ Use it at your own peril and only on copies of your files.
 
 ### Process the project
 
-![](demo/readme/project.png)
-![](demo/readme/plus.png)
-![](demo/readme/cover.png)
-![](demo/readme/plus.png)
-![](demo/readme/track-01.gif)
-![](demo/readme/plus.png)
-![](demo/readme/subtitle.png)
-![](demo/readme/plus.png)
-![](demo/readme/closing.png)
-![](demo/readme/equal.png)
+![](demo/readme/assets/project.png)
+![](demo/readme/assets/plus.png)
+![](demo/readme/assets/cover.png)
+![](demo/readme/assets/plus.png)
+![](demo/readme/assets/track-01.gif)
+![](demo/readme/assets/plus.png)
+![](demo/readme/assets/subtitle.png)
+![](demo/readme/assets/plus.png)
+![](demo/readme/assets/closing.png)
+![](demo/readme/assets/equal.png)
 
 
 ```sh
