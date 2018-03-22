@@ -38,16 +38,16 @@ Use it at your own peril and only on copies of your files.
 
 ### Process the project
 
-<img src="demo/readme/assets/project.png" width="200">
-<img src="demo/readme/assets/plus.png" width="200">
-<img src="demo/readme/assets/cover.png" width="200">
-<img src="demo/readme/assets/plus.png" width="200">
-<img src="demo/readme/assets/track-01.gif" width="200">
-<img src="demo/readme/assets/plus.png" width="200">
-<img src="demo/readme/assets/subtitle.png" width="200">
-<img src="demo/readme/assets/plus.png" width="200">
-<img src="demo/readme/assets/closing.png" width="200">
-<img src="demo/readme/assets/equal.png" width="200">
+<img src="demo/readme/assets/project.png" height="200">
+<img src="demo/readme/assets/plus.png" height="200">
+<img src="demo/readme/assets/cover.png" height="200">
+<img src="demo/readme/assets/plus.png" height="200">
+<img src="demo/readme/assets/track-01.gif" height="200">
+<img src="demo/readme/assets/plus.png" height="200">
+<img src="demo/readme/assets/subtitle.png" height="200">
+<img src="demo/readme/assets/plus.png" height="200">
+<img src="demo/readme/assets/closing.png" height="200">
+<img src="demo/readme/assets/equal.png" height="200">
 
 
 ```sh
