@@ -1,0 +1,20 @@
+size:
+  height: 350
+  width: 350
+text:
+  color: black
+  font: arimo.ttf
+  size: 24
+  x: 10
+  y: h-25
+  background-color: ffffff00
+tracks:
+  - file: svg/cover.svg
+    duration: 2
+  - file: tracks/01.webm
+    overlay:
+      - text: Click 2 times.
+        start: 2
+        duration: 4
+  - file: svg/closing.svg
+    duration: 2

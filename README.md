@@ -20,11 +20,12 @@ Use it at your own peril and only on copies of your files.
 
 ## Features
 
-- Stitch WebM files together
-- Add SVG slides
-- Apply SVG overlays
-- Add text overlays
-- The project file can be managed in a git repository
+- Stitching WebM files together.
+- Adding SVG slides.
+- Applying SVG overlays.
+- Adding text overlays.
+- The project file can be managed in a git repository.
+- Optional caching of the temporary files.
 
 ## Limits
 
@@ -36,6 +37,18 @@ Use it at your own peril and only on copies of your files.
 ## Usage
 
 ### Process the project
+
+![](demo/readme/project.png)
+![](demo/readme/plus.png)
+![](demo/readme/cover.png)
+![](demo/readme/plus.png)
+![](demo/readme/track-01.gif)
+![](demo/readme/plus.png)
+![](demo/readme/subtitle.png)
+![](demo/readme/plus.png)
+![](demo/readme/closing.png)
+![](demo/readme/equal.png)
+
 
 ```sh
 screencast-stitcher.py [-o output.webm] screencast.yaml
@@ -138,8 +151,13 @@ Python libraries:
 
 - python3-yaml
 
+## Ideas and alternatives
+
+- https://www.npmjs.com/package/video-stitch
+
 ## Todo
 
+- if the font name is not a path, first look in the local folder, than in `~/.fonts`, `/usr/share/fonts/...` (or other def.
 - `-svg-frame` does not seem to work on WebMs with drawtext overlays
 - create demo / test files
 - fade out the text and slides?
@@ -150,6 +168,10 @@ Python libraries:
 - can `mkvmerge` be replaced by `ffmpeg`?
 - only overwrite a default filename if `-force` is set
 - check if the tools like `-svg` should not read from the yaml
+- add /document sound?
+  - espeak ?
+  - festival ?
+    - Nick1 voice is not bad (http://www.cstr.ed.ac.uk/projects/festival/morevoices.html)... but it does not seem that one can download it.
 - check that the projects accepts file names with spaces  
   if not look into this:
 
