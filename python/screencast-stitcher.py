@@ -320,32 +320,6 @@ def get_webm_with_overlay(filename, overlays, project) :
 def get_ffmpeg_png_overlay(start, duration):
     return "overlay=0:0:enable='between(t, {}, {})'".format(start, start + duration)
 
-def get_webm_with_text_overlay(filename, text, time, config):
-    # ffmpeg -i input.mp4 -vf drawtext="fontfile=/path/to/font.ttf: \
-    # text='Stack Overflow': fontcolor=white: fontsize=24: box=1: boxcolor=black@0.5: \
-    # boxborderw=5: x=(w-text_w)/2: y=(h-text_h)/2" -codec:a copy output.mp4
-    fd, path = tempfile.mkstemp(suffix='.webm')
-    os.remove(path)
-    args_debug = ['-loglevel', 'panic'] if not debug else []
-    call_text = []
-    if (time):
-        time = (str(time[0]), str(time[0] + time[1]))
-        call_text += ['enable=\'between(t, '+', '.join(time)+')\'']
-    call_text += ['fontfile='+config['font'], 'text=\''+text+'\'', 'fontcolor='+config['color'], 'fontsize='+str(config['size'])]
-    # TODO: if no x defined, center the text, if no y defined 2*fontsize from the bottom
-    call_text += ['x='+str(config['x']), 'y='+str(config['y'])]
-    print(call_text)
-    call_text = ': '.join(call_text)
-    print('--'+call_text+'--')
-    call_args = ['ffmpeg', *args_debug, '-i', filename, '-vf', 'drawtext='+call_text, path]
-    if debug:
-        print(call_args)
-    print(' '.join(call_args))
-    #  you can play around with it by doing: python -c 'import sys; print(sys.argv)' -- {arguments here}
-    subprocess.run(call_args, check=True)
-    os.close(fd)
-    return path
-
 def generate_merged_webm(filename, tracks):
     # *(tracks[0], *('+' + t for t in tracks[1:]))
     args_tracks = ('{}{}'.format('+' if i > 0 else '', track) for i, track in enumerate(tracks))
