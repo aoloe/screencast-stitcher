@@ -15,6 +15,9 @@ The WebM and SVG files are managed through external tools:
 - `ffmpeg`
 - `imagemagick` (`convert`)
 
+Warning: this is alpha quality software!  
+Use it at your own peril and only on copies of your files.
+
 ## Features
 
 - Stitch WebM files together
