@@ -25,6 +25,8 @@ svg_image_template = '<image id="image1JPEG" x="0" y="0" width="{width}" height=
 debug = False
 
 def main(argv):
+    global debug
+
     args = get_args()
 
     debug = args.debug
@@ -113,12 +115,13 @@ def process(filename_yaml, output_filename, cache):
         elif file_extension == '.png':
             # TODO: add the caching
             filename = get_webm_from_png(filename, track['duration'])
+            temp_trashcan.append(filename)
 
         if 'overlay' in track:
             filename_overlay = tracks_cache.get(track)
             if not filename_overlay:
-                temp_trashcan.append(filename)
                 filename = get_webm_with_overlay(filename, track['overlay'], project)
+                temp_trashcan.append(filename)
 
         if filename:
             webm_tracks.append(filename)
@@ -288,8 +291,9 @@ def get_webm_with_overlay(filename, overlays, project) :
     # print(png_overlay)
     if png_overlay :
         overlay += ['[{}:v]'.format(first_i + i) + get_ffmpeg_png_overlay(t[1], t[2]) for i, t in enumerate(png_overlay)]
-    print(overlay)
-    call_args = ['ffmpeg', '-i', filename]
+
+    args_debug = ['-loglevel', 'panic'] if not debug else []
+    call_args = ['ffmpeg', *args_debug, '-i', filename]
     if png_overlay:
         for f in png_overlay:
             call_args += ['-i', f[0]]
@@ -310,7 +314,6 @@ def get_webm_with_overlay(filename, overlays, project) :
     print(' '.join(call_args))
     subprocess.call(call_args)
     os.close(fd)
-    print(path)
     # sys.exit()
     return path
 
@@ -335,7 +338,6 @@ def get_webm_with_text_overlay(filename, text, time, config):
     call_text = ': '.join(call_text)
     print('--'+call_text+'--')
     call_args = ['ffmpeg', *args_debug, '-i', filename, '-vf', 'drawtext='+call_text, path]
-    # call_args = ['ffmpeg', *args_debug, '-i', filename, '-vf', 'drawtext="'+call_text+'"', path]
     if debug:
         print(call_args)
     print(' '.join(call_args))

@@ -21,6 +21,7 @@ The WebM and SVG files are managed through external tools:
 - Add SVG slides
 - Apply SVG overlays
 - Add text overlays
+- The project file can be managed in a git repository
 
 ## Limits
 
