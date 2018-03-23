@@ -122,6 +122,7 @@ def process(filename_yaml, output_filename, cache):
             if not filename_overlay:
                 filename = get_webm_with_overlay(filename, track['overlay'], project)
                 temp_trashcan.append(filename)
+                tracks_cache.add(track, filename)
 
         if filename:
             webm_tracks.append(filename)
